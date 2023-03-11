@@ -1,9 +1,11 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
+app.use(express.json());
 app.get("/", (req, res) => {
   res.send("working");
 });
+
 mongoose
   .connect(
     "mongodb+srv://drifter_beta:thatswhatshesaid@cluster.gl8soac.mongodb.net/?retryWrites=true&w=majority"
